@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">GitApp</string>
+    <string name="head_image">head_image</string>
+    <string name="name">Xuanyi Zhu </string>
+    <string name="info_1">Followers</string>
+    <string name="info_2">Followings</string>
+    <string name="info_3">Repositories</string>
+    <string name="followersCount">4</string>
+    <string name="followingCount">17</string>
+    <string name="RepositoryCount">8</string>
+    <string name="user_name">XuanyiZ</string>
+    <string name="Profile_create_date">20180312</string>
+    <string name="bio">I am a Computer Science undergraduate. My competencies are software development, algorithms, UI applications.</string>
+    <string name="action_settings">Settings</string>
+    <string name="repo_link" />
+</resources>
