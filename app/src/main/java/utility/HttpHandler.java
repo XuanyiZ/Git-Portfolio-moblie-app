@@ -6,6 +6,7 @@ package utility;
  * https://stackoverflow.com/questions/13784825/how-can-i-parse-a-json-object-and-display-it-in-a-list-view
  * https://stackoverflow.com/questions/36221795/android-parse-json-data-from-a-web-server-and-display-on-listview
  */
+import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -15,8 +16,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import android.util.Log;
 
+import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
+
+import static android.content.Context.MODE_WORLD_READABLE;
 
 
 public class HttpHandler {
@@ -43,10 +48,15 @@ public class HttpHandler {
         } catch (ProtocolException e) {
             Log.e(TAG, "ProtocolException: " + e.getMessage());
         } catch (IOException e) {
-            Log.e(TAG, "IOException: " + e.getMessage());
+            //Log.e(TAG, "IOException: " + e.getMessage());
         } catch (Exception e) {
             Log.e(TAG, "Exception: " + e.getMessage());
         }
+        String FILENAME = "mydata";
+        String data = response;
+
+
+
         return response;
     }
 

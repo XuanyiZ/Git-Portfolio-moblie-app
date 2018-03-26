@@ -32,4 +32,9 @@ public class ProfileActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FollowingsActivity.class);
         startActivity(intent);
     }
+
+    public void gotoLogin(View view) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
 }

@@ -10,6 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -23,6 +24,10 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import utility.HttpHandler;
@@ -84,6 +89,24 @@ public class RepositoriesActivity extends AppCompatActivity {
 
             // Making a request to url and getting response
             String jsonStr = sh.makeServiceCall(url, "GET");
+            String FILENAME = "Store_Repo_info";
+
+            FileOutputStream fos = null;
+            try {
+                fos = openFileOutput(FILENAME, Context.MODE_APPEND);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            try {
+                fos.write(jsonStr.getBytes());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                fos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             Log.e(TAG, "Response from url: " + jsonStr);
 

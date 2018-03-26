@@ -144,6 +144,15 @@
 
         </RelativeLayout>
 
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:onClick="gotoLogin"
+            android:text="OAuth" />
 
 
     </RelativeLayout>
@@ -161,14 +170,14 @@
             android:text="@string/bio"
             android:textColor="#f9ebfa"
             android:textSize="20sp"
-            android:paddingBottom="100dp"
+            android:paddingBottom="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
 
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Profile_create_date" />

@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context="com.example.xuanyi.gitapp.FollowersActivity">
 
+    <ListView
+        android:autoLink="web"
+        android:text="@string/follower_link"
+        android:id="@+id/list2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
